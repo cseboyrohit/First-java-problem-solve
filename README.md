@@ -71,6 +71,7 @@ public class Main {
         System.out.println(obj.calVolum());
         System.out.println(obj.calculateArea());
         System.out.println(obj.calculatePerimeter());
+        System.out.println()
  
     }
 }
