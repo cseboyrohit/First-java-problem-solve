@@ -1,0 +1,44 @@
+interface CellPhone{
+      void takecall();
+      void takesimage();
+      private void geet(){ // ye defult ke under dal kar print kara sakte hai
+          System.out.println(" i am private geet");
+      }
+      default void smallPhone(){
+          geet();         // For example
+          System.out.println("Nokia Keypad 1600..");
+      }
+}
+ interface Cammera{
+      void Tackeimage(long numberOfPhoto);
+ }
+class MyCellPhone{
+       void callNumber(long MobialNumber){
+           System.out.println("calling number is "+MobialNumber);
+       }
+}
+ class MyPhone extends MyCellPhone implements CellPhone,Cammera{
+        public void takecall(){
+            System.out.println("Ring... tring tring");
+        }
+
+     @Override
+     public void takesimage() {
+         System.out.println("your photo is takeimage");
+     }
+     @Override
+     public void Tackeimage(long numberOfPhoto) {
+         System.out.println("takeimage for 2nd Interfaces");
+     }
+ }
+  public class app{
+      public static void main(String[] args) {
+          MyPhone use = new MyPhone();
+          use.callNumber(001234567);
+           use.Tackeimage(12);
+           use.smallPhone();   // Output Here
+
+      }
+  }
+
+
