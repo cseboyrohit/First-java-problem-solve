@@ -1,0 +1,46 @@
+interface Bicycle{
+    // public Bicycle(){  // error throw this is not invalid
+    //     System.out.println("interfance Bicycle first Interface ");
+    // }
+
+    //void cheak();  --> error  // ye app yaha par use karke chor nhi sakte ho
+    // agar karna hai to defult bana hoga  fir use kar skte ho
+    void applySpeed(int increase);
+    void applybreak(int decrease);
+}
+interface HornBicycle{
+   // void cheak(); // ye app yaha par use karke chor sakte ho
+    void applyHorn();
+    void applySound();
+}
+class heroBicycle implements Bicycle {
+    public heroBicycle(){
+        System.out.println("hero first class for implement");
+    }
+    public void applySpeed(int increase){
+        System.out.println("now you can spped Increase");
+    }
+    public void applybreak(int decrease){
+        System.out.println("please use break");
+    }
+    public void applyHorn(){
+        System.out.println("pee pee please Side me");
+    }
+    public void applySound(){
+        System.out.println("sound... hello sir please look at me");
+    }
+    public void applySound1(){
+        System.out.println("heelo");
+    }
+}
+public class app{
+    public static void main(String[] args) {
+        heroBicycle cycle =new heroBicycle();
+        // cycle.applybreak(12);
+        cycle.applybreak(25);
+        cycle.applyHorn();
+        cycle.applySound();
+        cycle.applySound1();
+   
+    }
+}
