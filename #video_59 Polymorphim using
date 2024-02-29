@@ -1,0 +1,75 @@
+/*interface CellPhone{
+    void calling();
+    void DonotWathvideo();
+    private void extra(){
+        System.out.println("when default part extra to you can use private method");
+    }
+    default void addnew(){
+        System.out.println(" Some add without method");
+    }
+}
+interface GPS{
+    void tracklocation();
+    void showTrack();
+}
+interface mediaPlayer{
+     void listingMusic();
+     void changeMusic();
+}
+class Smartphone implements CellPhone,GPS , mediaPlayer{
+    @Override
+    public void calling() {
+        System.out.println("cellphone call his friend");
+    }
+
+    @Override
+    public void DonotWathvideo() {
+        System.out.println("DonotWathvideo keypad phone you don't watch movies");
+    }
+    public void tracklocation(){
+        System.out.println("You can track location");
+    }
+    public void showTrack(){
+        System.out.println("showTrack() for help of map");
+    }
+    public void listingMusic(){
+        System.out.println("listingMusic() ");
+    }
+    public void changeMusic(){
+        System.out.println("yes you can change music changeMusic");
+    }
+    interface Personal{
+        void crome();
+        void ChatGPT();
+    }
+}
+class allallowed extends Smartphone{
+    public void crome(){
+        System.out.println("Search Every Thing show website");
+    }
+    public void ChatGPT(){
+        System.out.println("Search every this, Show Result ");
+    }
+}
+public class polymorphim {
+    public static
+    void main(String[] args) {
+//        CellPhone phone=new Smartphone();
+//        phone.calling();
+//        // phone.showTrack(); //Error throw Because reference pass CellPhone
+;
+
+       ////->> Referance pass mediaPlayer you axis for only mediaPlayer
+//        mediaPlayer search1= new allallowed();
+//        search1.listingMusic();
+//        search1.changeMusic();
+
+        // all method are axis
+        allallowed search= new allallowed();
+        search.ChatGPT();
+        search.listingMusic();
+        search.changeMusic();
+        search.addnew();
+    }
+}
+   */
