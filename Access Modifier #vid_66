@@ -1,0 +1,33 @@
+// Access Modifier in java Vid no 66
+
+class parent {   //AccessModifiers
+    public int name=10;
+    protected int marks = 85;
+    int abcId = 5512;
+    private int a=20;
+
+    public void impl() {
+         System.out.println(name);
+        System.out.println(marks);
+        System.out.println(abcId);
+        System.out.println(a);
+    }
+}
+class harry extends parent {
+    public void impl1() {
+        System.out.println(name);
+        System.out.println(marks);
+        System.out.println(abcId);
+        //System.out.println(a); // This is a private method they can not used other class
+        System.out.println("This is Sub class ");
+    }
+
+}
+public class Chapter12 {
+    public static void main(String[] args) {
+        // parent pr = new parent();
+       harry op= new harry();
+       op.impl1();
+
+    }
+}
