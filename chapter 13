@@ -1,0 +1,44 @@
+package com.copany;
+/*
+class MyThread1 extends Thread{ // Thread is nota a veriable It is Compasary
+     public void run(){
+        int i=0;
+        while(i<1000){
+            System.out.println("My cooking Threader1");
+            System.out.println("I am Happy");
+            i++;
+        }
+     }
+}
+class MyThread2 extends Thread{
+    public void run(){
+        int i=0;
+        while(i<1000){
+            System.out.println("I am chating with her 2");
+            System.out.println("I am sad");
+            i++;
+        }
+    }
+}
+class MyThread3 extends Thread{
+    public void run(){
+        int i=0;
+        while(i<1000){
+            System.out.println("I am study thread 3");
+            System.out.println("i am very Excited");
+            i++;
+        }
+    }
+}
+
+
+public class Chapter_13_muliThreading {
+    public static  void main(String[] args) {
+        MyThread1 obj = new MyThread1();
+        MyThread2 obj2 = new MyThread2();
+        MyThread3 obj3 = new MyThread3();
+        obj3.start();
+        obj.start();
+        obj2.start();
+    }
+}
