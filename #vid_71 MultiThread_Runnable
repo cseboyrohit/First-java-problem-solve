@@ -1,0 +1,42 @@
+ class MyThread1 implements Runnable{
+     public void run(){  // run use only one time in one method
+         int i=0;
+         while(i<4000){
+             System.out.println("hello i am MyThread1 class ");
+             i++;
+         }
+     }
+ }
+ class MyThread2 implements Runnable{
+     @Override
+      public void run(){
+          int i = 0;
+          while(i<4000){
+              System.out.println("hii");
+              System.out.println(" I am MyThread2 class  ");
+              i++;
+
+         }
+      }
+ }
+/* class rohit extends Thread { // Kay fyda when same works doing as Runnable
+      public void run(){
+          int a=0;
+          int b=12+3;
+          System.out.println(b);
+          }
+      }
+
+
+
+public class Chapter_13_muliThreading {
+    public static void main(String[] args) {
+        MyThread1 obj = new MyThread1();
+        Thread gun = new Thread(obj);
+        gun.start();
+        MyThread2 emo = new MyThread2();
+        Thread gun1= new Thread(emo);
+        gun1.start();
+
+    }
+}
