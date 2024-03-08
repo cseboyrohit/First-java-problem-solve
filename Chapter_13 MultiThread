@@ -1,5 +1,5 @@
 package com.copany;
-/*
+
 class MyThread1 extends Thread{ // Thread is nota a veriable It is Compasary
      public void run(){
         int i=0;
