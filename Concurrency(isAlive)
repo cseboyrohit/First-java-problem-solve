@@ -1,0 +1,25 @@
+import static com.copany.Student.amount1;
+class Student extends Thread{
+    public static int amount1 = 0;
+
+
+}
+public class Chapter_13_muliThreading {
+    public static void main(String[] args) {
+        Student obj = new Student();
+        obj.start();
+       while(obj.isAlive()){
+           System.out.println("Wating...");
+       }
+        System.out.println("main..."+amount1);
+       amount1++;
+       System.out.println("main..."+amount1);
+       amount1++;
+       System.out.println("main..."+amount1);
+       amount1++;
+        System.out.println("main..."+amount1);
+    }
+    public void run(){
+        amount1++; //no need
+    }
+}
