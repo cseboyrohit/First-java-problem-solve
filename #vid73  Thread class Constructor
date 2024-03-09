@@ -1,0 +1,36 @@
+ //--->> The Thread Class <---
+class MyThre extends Thread{
+      MyThre(String name){
+          super(name);  // It is Not compsary; for this yet
+          System.out.println("I am Constoructor class");
+      }
+      public void run(){
+          System.out.println("I am run Method Thanks You");
+          int num=1;
+      }
+         }
+         class MyPersonal implements Runnable{
+              MyPersonal(String name){
+                  super();
+                  System.out.println("Runnable Class");
+              }
+              public void run(){
+                  int i=12;
+              }
+         }
+         public class Chapter_13_muliThreading {
+             public static void main(String[] args) {
+                 MyThre obj= new MyThre("Rohit");
+                      //Runnable
+                 MyPersonal personal = new MyPersonal("Harry");
+                 Thread gun= new Thread(personal);
+
+                 obj.start();
+                 gun.start();
+
+                 System.out.println("The id of thread "+obj.getId());
+                 System.out.println("The name  of thread:-  "+obj.getName());
+                 System.out.println("The id of Runnable: "+ gun.getId());
+                  System.out.println("The Name of Runnable: "+ gun.getName());
+             }
+         }
