@@ -1,0 +1,128 @@
+import java.beans.Expression;
+import java.security.cert.Extension;
+
+// //---->> Use for Thread.sleep()
+/* class MyJoin extends Thread{
+     public void run(){
+         int i=0;
+         try{
+         while(i<20) {
+             Thread.sleep(2000);// Sleep Use for Delay The program;
+             System.out.println("Hii I am Using Join");
+             i++;
+
+         }
+         } catch (InterruptedException e) {
+             // Without Throw new Wirte Your Program Run SuccessFully
+             throw new RuntimeException(e); // Not need to Write
+             //System.out.println(e);
+         }
+     }
+}
+
+public class Vid_75_join {
+    public static void main(String[] args) {
+        MyJoin j= new MyJoin();
+        j.start();
+    }
+}
+
+*/
+////----->Useing join() Method
+/*
+ class UsingJoin extends Thread{
+     public void run(){
+         int a=0;
+         while(a<30) {
+
+             System.out.println(" Hello  I am Useing join() Method");
+             a++;
+         }
+     }
+}
+class UsingJoin1 extends Thread{
+//     UsingJoin1(String name){
+//     }
+     public void run(){
+         int a=0;
+         while(a<30){
+             System.out.println("I am join method 2");
+             a++;
+         }
+     }
+}
+public class Vid_75_join {
+    public static void main(String[] args) {
+      UsingJoin join= new UsingJoin();
+     // UsingJoin1 join2= new UsingJoin1("Rohit");
+        UsingJoin1 join2= new UsingJoin1();
+      try {
+          join2.join();
+      }
+      catch(Exception e){
+          System.out.println(e);
+      }
+      ////--> Now You Can setPriority
+//      join2.setPriority(Thread.MAX_PRIORITY);
+//        System.out.println(join2.getPriority());
+
+      join.start();
+      join2.start();
+
+    }
+ }
+//
+ */
+
+/*
+  ////---> Program Use join() Method and sleep() --->
+
+class UsingJoin extends Thread{
+    public void run(){
+        int a=0;
+        // Now this program is Delay:0
+
+        try{
+            Thread.sleep(2000);
+        }
+        catch(InterruptedException e){
+            System.out.println(e);
+
+        }
+        while(a<30) {
+            System.out.println(" Hello  I am Useing join() Method");
+            a++;
+        }
+    }
+}
+class UsingJoin1 extends Thread{
+    //     UsingJoin1(String name){
+//     }
+    public void run(){
+        int a=0;
+        while(a<30){
+            System.out.println("I am join method 2");
+            a++;
+        }
+    }
+}
+public class Vid_75_join {
+    public static void main(String[] args) {
+        UsingJoin join= new UsingJoin();
+        UsingJoin1 join2= new UsingJoin1();
+        try {
+            join2.join();
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+        ////--> Now You Can setPriority
+//      join2.setPriority(Thread.MAX_PRIORITY);
+//        System.out.println(join2.getPriority());
+        System.out.println(join.getId());
+        join.start();
+        join2.start();
+
+    }
+}
+ */
