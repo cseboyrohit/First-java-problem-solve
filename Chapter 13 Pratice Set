@@ -1,0 +1,146 @@
+// PRATIC_SET_13 QUESTION PROBLEM SOLVE
+/*
+  // Question No 1
+ 
+class pratic13 extends Thread{
+    public void run(){
+        int i=0;
+        while(true){
+            System.out.println("Good Morning");
+        }
+    }
+}
+class pratic2 extends Thread{
+    public void run(){
+        int i=0;
+        while(true){
+            System.out.println("WhellCome ");
+        }
+    }
+}
+public class Vid_75_join {
+    public static void main(String[] args) {
+        pratic13 p = new pratic13();
+        pratic2 obj = new pratic2();
+        p.start();
+        obj.start();
+    }
+}
+*/
+      //Question No.2
+/*
+class pratic13 extends Thread{
+    public void run(){
+        int i=0;
+        while(true){
+            System.out.println("Good Morning");
+        }
+    }
+}
+class pratic2 extends Thread{
+    public void run(){
+        int i=0;
+       try{
+           Thread.sleep(200);
+       }
+       catch ( InterruptedException e) {
+
+       }
+           while (true) {
+               System.out.println("Hello World");
+       }
+           }
+       }
+public class Vid_75_join {
+    public static void main(String[] args) {
+        pratic13 p = new pratic13();
+        pratic2 obj = new pratic2();
+        p.start();
+        obj.start();
+    }
+}
+*/
+             //Question No 3:
+/*
+ class LearnThread extends Thread {
+    LearnThread(String name) {
+    }
+
+    public
+    void run() {
+        int i = 1;
+        try{
+            Thread.sleep(200);
+        }
+        catch ( Exception e) {
+//            System.out.println(e);
+        }
+        while (i<30) {
+            System.out.println("good Morning"+ this.getName() );
+            i++;
+        }
+    }
+}
+class LearnThread13 extends Thread {
+      public void  run(){
+          int i=1;
+          while(i<30){
+              System.out.println("LearnThread 13 class");
+              i++;
+          }
+
+      }
+}
+public class Vid_75_join{
+    public static void main(String[] args) {
+        LearnThread f1= new LearnThread("Rohit");
+        LearnThread13 learn= new LearnThread13();
+        f1.start();
+        learn.start();
+        f1.setPriority(5); //Priority 5 Give
+        learn.setPriority(Thread.MAX_PRIORITY); //
+        System.out.println(learn.getPriority());// You cheak get Priority
+        System.out.println(f1.getPriority());// You cheak get Priority for Exam 5:
+
+    }
+}
+*/
+  //  Question No 5
+
+ class pratic extends Thread {
+     public void run(){
+//         try{
+//             Thread.sleep(200);
+//         }
+//         catch(Exception e){
+//             System.out.println(e);
+//         }
+         int i=0;
+         while (i<20){
+             System.out.println("hello sir ");
+             i++;
+         }
+     }
+ }
+class pratic13 extends Thread {
+     public void run(){
+         int i=0;
+         while (i<20){
+             System.out.println("Referance thre Current Thread ");
+             i++;
+         }
+     }
+ }
+ public class Vid_75_join{
+     public static void main(String[] args) {
+         pratic p= new pratic();
+         pratic13 obj= new pratic13();
+          p.start();
+          obj.start();
+//         System.out.println(p.getState()); // Show The Status Runnable and Waiting
+         System.out.println(obj.getState());
+         System.out.println(Thread.currentThread().getState());
+          System.out.println(p.getClass());
+
+     }
+ }
