@@ -30,3 +30,88 @@ public class chw_14_vid_78 {
         System.out.println("The End of Program");
     }
 }
+
+
+   ----->     #VIDEO NUMBER 82  <-----
+     // HANDLINH SPECIFIC EXCEPTIONS
+
+     class SpecificExceptions extends Thread{
+         public void run(){
+             int[]marks=new int[3];
+              marks[0]=7;
+              marks[1]=56;
+              marks[2]=6;
+              Scanner sc= new Scanner(System.in);
+             System.out.println("Enter The Arry Index");
+                  int n=sc.nextInt();
+                  int m= sc.nextInt();
+                  try {
+                          System.out.println("The Value of number is :" + marks[n] / m);
+                      }
+                  catch(ArithmeticException e){
+                          System.out.println(".ArithmeticException Exception :");
+                          System.out.println(e); // jo kami hota hai ushe show karta hai / by zero
+                  }
+                  catch(ArrayIndexOutOfBoundsException e){
+                          System.out.println("ArrayIndexOutOfBoundsException occured!");
+                          System.out.println(e);
+                      }
+                 catch(Exception e){
+                          System.out.println("Some other exception occured! ");
+                          System.out.println(e);
+                  }
+         }
+     }
+public class chw_14_vid_78 {
+    public static void main(String[] args) {
+        SpecificExceptions obj= new SpecificExceptions();
+        obj.start();
+
+    }
+}
+
+
+ ----->  // NESTED TRY- CATCH IN JAVA <-----
+
+     class nestedtry extends Thread{
+         public void run() {
+             int[] marks = new int[3];
+             marks[0] = 7;
+             marks[1] = 56;
+             marks[2] = 6;
+
+             Scanner sc = new Scanner(System.in);
+             boolean flag=true;
+             while(flag){
+             System.out.println("Enter The Arry Index");
+             int ind = sc.nextInt();
+
+             try {
+                 System.out.println("Nested Try 1 vid 82");
+                 try {
+                     System.out.println("Marks of Number is  : "+marks[ind]);
+                     flag=false;
+
+                 } catch(ArrayIndexOutOfBoundsException e){
+                     System.out.println("Sorry this index does not exist");
+                     System.out.println("Exception in leavel 1");
+                 }
+             }
+            catch (Exception e) {
+                System.out.println("Exception in leavel 2");
+                // System.out.println(e);
+            }
+             }
+             System.out.println("Thanks for Using Program");
+         }
+     }
+
+public class chw_14_vid_78 {
+    public static
+    void main(String[] args) {
+        nestedtry obj = new nestedtry();
+        obj.start();
+    }
+}
+
+
