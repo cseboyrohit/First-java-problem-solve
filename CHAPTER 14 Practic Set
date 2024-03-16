@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Chap_14_pract {
+    public static void main(String[] args) {
+     /*    // Probleam 1
+      //  int a=56  // Syntax Error
+        int age =78;
+         int born=2000-78; //logical error
+        System.out.println(6/0);   */
+
+        //--->  PROBLEM NO 2  <---
+/*
+
+        try{
+//            System.out.println(100/0);
+            int a=10/0;
+            System.out.println("Yes correct try code");
+        }
+        catch(ArithmeticException e){
+            System.out.println(e);
+            System.out.println("HaHa");
+        }
+        catch(IllegalAccessError e){
+            System.out.println(e);
+            System.out.println("HeHe");
+        }
+        */
+//-------------------------------------------------------------------------
+        //-->  Question No 3 <--
+     public class Chap_14_pract {
+    public static void main(String[] args) {
+         int []marks=new int[3];
+               marks[0]=7;
+               marks[1]=56;
+               marks[2]=9;
+         Scanner sc= new Scanner(System.in);
+         int index;
+       // booleam flag=true;
+         int i=0;
+          while(true && i<5) {
+              System.out.println("Enter The Vale of index");
+              index = sc.nextInt();
+              try{
+                  System.out.println("The Value of Marks[]Index is" + marks[index]);
+                  break;
+              }
+              catch(ArrayIndexOutOfBoundsException e){
+                  System.out.println(e);
+                  e.getStackTrace();
+                  i++;
+              }
+          }
+          if(i>=5){
+              System.out.println("Error");
+          }
+    }
+}
