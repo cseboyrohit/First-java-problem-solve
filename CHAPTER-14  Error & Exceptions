@@ -70,7 +70,7 @@ public class chw_14_vid_78 {
     }
 }
 
-
+-----------------------------------------------------------------------------
  ----->  // NESTED TRY- CATCH IN JAVA <-----
 
      class nestedtry extends Thread{
@@ -113,7 +113,7 @@ public class chw_14_vid_78 {
         obj.start();
     }
 }
-
+----------------------------------------------------------------------------------
   //---> EXCEPTION CLASS  <----
 #VIDEO NO 83 
 
@@ -169,4 +169,99 @@ public class chapter_14 {
         }
     }
 }
+
+--------------------------------------------------------------------------------------------
+  //  ---  THE THROWS EXCEPTION  ---- #VID_84
+import java.util.Scanner;
+//--->CODE FOR DRIVING CAR ARE NOT DRIVE <---// made by me
+// Enter Age and you find the Eligiblility Chartery
+// Only wrong 4 time Because set Charteriya (i)
+// Agar ap age<18 Dalte hai to custom Exception Throw karega
+/*
+class cheakDrivecar extends Exception{
+    public String toString(){
+        return " You able to Drive";
+    }
+    public String getMessage(){
+        return "You can not Drive";
+    }
+}
+public class Custom_Exception {
+    public static int yourage(int age) throws cheakDrivecar{
+        if(age<18 ||  age>140){
+            throw new cheakDrivecar();
+        }
+        System.out.println("Yes you can Drive ");
+        return age ;
+
+    }
+    public static void main(String[] args) {   //throws cheakDrivecar {
+        Scanner sc= new Scanner(System.in);
+        boolean flag=true;
+        int i=0;
+         while(flag && i<5) { //i<5 ka matlab ap 5 bar hi wrong Enter kar sakte hai
+             System.out.println("Enter your age");
+             int num = sc.nextInt();
+             try {
+                 int a = yourage(num);
+                 System.out.println(a);
+                flag=false;
+             } catch (Exception e) {
+                 e.getStackTrace();
+                 System.out.println("Sorry Your age is age>18 So you can not Drive");
+                 System.out.println(e.getStackTrace());
+                 System.out.println(e.getMessage());
+               i++;
+             }
+
+             System.out.println("Finish");
+
+         }
+    }
+      }
+// Agar apko Aise print karane ho to ap main ke pass -> throws cheakDrivecar { <- use karenge
+        //int a=yourage(13);
+         //   System.out.println(a);
+        //
+*/
+
+----------------------------------------------------------------------
+ //---> JAVA FINALLY BLOCK <----
+     //#Vid_85
+public class Custom_Exception {
+    public static int greet(){
+    Scanner sc=new Scanner(System.in);
+        System.out.println("Enter First num: ");
+    int a= sc.nextInt();
+        System.out.println("Enter First Second: ");
+    int b= sc.nextInt();
+    try{
+        int result=a/b;
+        return result;
+    }
+    catch( Exception e) {
+        System.out.println(e);
+    }
+    return -1; // Your choice put any number
+    }
+    public static void main(String[] args) {
+        int ab=greet();
+//        System.out.println(ab);
+
+            try{
+                System.out.println(ab);
+            }
+            catch(Exception e){
+                System.out.println(e);
+            }
+            finally{
+                System.out.println(" I am finally Block..This is the end of This funcation");
+
+        }
+
+    }
+
+}
+
+
 
