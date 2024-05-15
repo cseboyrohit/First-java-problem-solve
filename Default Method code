@@ -1,4 +1,4 @@
-interface CellPhone{
+  interface CellPhone{
       void takecall();
       void takesimage();
       private void geet(){ // ye defult ke under dal kar print kara sakte hai
