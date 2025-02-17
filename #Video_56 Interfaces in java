@@ -1,7 +1,7 @@
 interface Bicycle{
     // public Bicycle(){  // error throw this is not invalid
     //     System.out.println("interfance Bicycle first Interface ");
-    // }
+    // } ////
 
     //void cheak();  --> error  // ye app yaha par use karke chor nhi sakte ho
     // agar karna hai to defult bana hoga  fir use kar skte ho
