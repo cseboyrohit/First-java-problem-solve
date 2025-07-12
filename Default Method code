@@ -5,7 +5,7 @@
           System.out.println(" i am private geet");
       }
       default void smallPhone(){
-          geet();         // For example
+          geet();        
           System.out.println("Nokia Keypad 1600..");
       }
 }
