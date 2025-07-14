@@ -1,6 +1,6 @@
  class Rectangle {
      protected double length;
-     protected Double width;
+     protected Double width; //
 
      Rectangle() {
          System.out.println(" I am rectangle Class no pass auguement");
