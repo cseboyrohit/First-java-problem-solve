@@ -17,7 +17,7 @@ public class Chapter_13_muliThreading {
        amount1++;
        System.out.println("main..."+amount1);
        amount1++;
-        System.out.println("main..."+amount1);
+        System.out.println("main..."+amount1);//
     }
     public void run(){
         amount1++; //no need
